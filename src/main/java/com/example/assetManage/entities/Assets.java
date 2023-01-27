@@ -16,9 +16,8 @@ public class Assets {
     private long c_id;
     @Column(name = "status_id")
     private long s_id;
-    @Column(name = "first_name")
-    private String firstName;
-    private String lastName;
+    @Column(name = "name")
+    private String name;
     @Column(name = "purchase_date")
     private Date p_date;
     @Column(name = "condition_note")
@@ -27,11 +26,10 @@ public class Assets {
     public Assets() {
     }
 
-    public Assets(long c_id, long s_id, String firstName, String lastName, Date p_date, String c_note) {
+    public Assets(long c_id, long s_id, String name, Date p_date, String c_note) {
         this.c_id = c_id;
         this.s_id = s_id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.name = name;
         this.p_date = p_date;
         this.c_note = c_note;
     }
@@ -60,20 +58,12 @@ public class Assets {
         this.s_id = s_id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Date getP_date() {
